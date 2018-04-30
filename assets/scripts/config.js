@@ -2,8 +2,8 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://wdi-library.herokuapp.com/books',
-  development: 'http://localhost:4741'
+  production: 'https://wdi-library.herokuapp.com',
+  development: 'https://wdi-library.herokuapp.com'
 }
 
 if (window.location.hostname === 'localhost') {

@@ -1,18 +1,18 @@
 const showBooksTemplate = require('./templates/books-listing.handlebars')
 
-const onGetBooksSuccess = (data) => {
+const getBooksSuccess = (data) => {
   $('#message').text('Books were displayed successfully')
   $('#message').css('background-color', 'green')
-  const showBooksHtml = showBooksTemplate({ notes: data.books })
+  const showBooksHtml = showBooksTemplate({ books: data.books })
   $('.container-fluid').html(showBooksHtml)
 }
 
-const onGetBooksFailure = () => {
+const getBooksFailure = () => {
   $('#message').text('Failed to display books')
   $('#message').css('background-color', 'red')
 }
 
 module.exports = {
-  onGetBooksSuccess,
-  onGetBooksFailure
+  getBooksSuccess,
+  getBooksFailure
 }
